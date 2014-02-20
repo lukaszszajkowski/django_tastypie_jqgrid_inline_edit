@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load jqgrid %}
+{% block extra_head %}
+	{% jqgrid_css_tags jquery_ui=True %}
+    {% jqgrid_js_tags jquery_ui=True locale='en'%}
+    <script type="text/javascript" charset="utf-8">
+         $(function(){
+                $('a[href="{{ request.path }}"]').parent().addClass('active')
+         });
+    </script>        
+{% endblock %}
+
+{% block content %}	
+	<h1>Pensioner django-tastypie-jqgrid</h1>
+	<div class="alert alert-block alert-info">
+	  <button type="button" class="close" data-dismiss="alert">&times;</button>
+	</div>
+		
+	
+	<ul class="nav nav-tabs">
+		<li><a href="{% url 'auto-colmodel' %}">Basic grid</a></li>
+		<li><a href="{% url 'cust-colmodel' %}">Grid with toolbar</a></li>
+		<li><a href="{% url 'inline-edit' %}">Enable editing</a></li>
+	</ul>
+	{% block grid_desc %}
+
+	{% endblock %}
+    <div class="wrapper">
+    	<table id="my-grid"></table>
+    	<div id="gridpager"></div> 
+    </div>
+    {% jqgrid_init "#my-grid" %}
+{% endblock %}

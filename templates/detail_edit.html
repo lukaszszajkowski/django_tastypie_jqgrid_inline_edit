@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Edit {{ pensioner.reference }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url "detail_edit" pensioner.reference %}" method="post">
+    {% csrf_token %}
+<ul>
+    <li>Reference: {{ pensioner.reference }}</li>
+    <li>Title: <input type="text" name="title" id="title" value="{{ pensioner.title }}" /></li>
+    <li>Forename: <input type="text" name="forename" id="forename" value="{{ pensioner.forename }}"></li>
+    <li>Surname: <input type="text" name="surname" id="surname" value="{{ pensioner.surname }}"></li>
+</ul>
+    <p>
+        <a href="{% url "detail" pensioner.reference %}">Cancel</a>
+        <input type="submit" value="Save" />
+    </p>
+</form>
+{% endblock content %}

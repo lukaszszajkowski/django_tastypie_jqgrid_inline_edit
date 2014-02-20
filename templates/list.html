@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if list %}
+        <ul>
+            {% for pensioner in list %}
+                <li><a href="/pensioners/{{ pensioner.reference }}/">{{ pensioner.forename }} {{ pensioner.surname }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No pensioner are available.</p>
+    {% endif %}
+{% endblock content %}

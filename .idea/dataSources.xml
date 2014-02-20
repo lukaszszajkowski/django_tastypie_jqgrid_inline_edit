@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2058358745">
+    <data-source source="LOCAL" name="Django default" uuid="dae0d0c9-7961-45aa-b16c-1018a241323b">
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\dev\django_tastypie_jqgrid_inline_edit\.\db.db</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

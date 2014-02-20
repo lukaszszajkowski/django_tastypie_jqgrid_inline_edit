@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title  %}{{ block.super }}Home Page {% endblock title  %}
+
+{% block content %}
+    <p>Hello {{ pensioner.title }} {{ pensioner.surname }}</p>
+    <p><a href="/pensioners/">All</a></p>
+    <p><a href="/pensioners/apilist/">Api</a></p>
+    <p><a href="/pensioners/toolbargrid">Grid</a></p>
+{% endblock content %}

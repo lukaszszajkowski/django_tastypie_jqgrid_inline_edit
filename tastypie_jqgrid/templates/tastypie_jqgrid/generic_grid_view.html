@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{# this is generic grid view, for fast-implementing. you can and should ;) extend it. #}
+{% load jqgrid %}
+
+{% block extra_head %}
+    {% jqgrid_css_tags jquery_ui=True %}
+    {% jqgrid_js_tags jquery_ui=True locale='en'%}
+{% endblock %}
+
+
+{% block content %}
+	<table id="grid"></table>    
+	{% jqgrid_init "#grid" %}	
+{% endblock %}

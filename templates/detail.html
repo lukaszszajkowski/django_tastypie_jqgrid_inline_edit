@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    <ul><li>Reference: {{ pensioner.reference }}</li>
+        <li>Title: {{ pensioner.title }}</li> <li>Forename: {{ pensioner.forename }}</li>
+        <li>Surname: {{ pensioner.surname }}</li></ul>
+    <p> <a href="{% url "index" %}"> All Members</a>
+        <a href="/pensioners/{{ pensioner.reference }}/edit/"> Edit</a></p>
+{% endblock content %}

@@ -1,0 +1,20 @@
+[
+    {
+        "pk": "0001",
+        "fields": {
+            "surname": "Smith",
+            "title": "Ms.",
+            "forename": "John"
+        },
+        "model": "main.pensioner"
+    },
+    {
+        "pk": "0002",
+        "fields": {
+            "surname": "Johnson",
+            "title": "Ms",
+            "forename": "Anna"
+        },
+        "model": "main.pensioner"
+    }
+]

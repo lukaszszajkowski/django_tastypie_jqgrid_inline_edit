@@ -1,0 +1,51 @@
+# Python bytecode:
+*.py[cod]
+.DS_Store
+
+# C extensions
+*.so
+
+# Packaging files:
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+__pycache__
+
+# Editor temp files:
+*.swp
+*~
+
+# Sphinx docs:
+build
+
+# SQLite3 database files:
+#*.db
+# Installer logs
+
+# Logs:
+*.log
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+
+# PyCharmd
+# .idea
+
+
+
+#java specific
+*.class

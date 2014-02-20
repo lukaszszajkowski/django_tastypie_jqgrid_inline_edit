@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul>
+        <li><a href="/pensioners/api/v1/?format=json">Api list endpoint</a></li>
+        <li><a href="/pensioners/api/v1/pensioner/schema/?format=json">Pensioner schema</a></li>
+        <li><a href="/pensioners/api/v1/pensioner/?format=json">All Pensioners</a></li>
+        {% for pensioner in list %}
+            <li><a href="/pensioners/api/v1/pensioner/{{ pensioner.reference }}/?format=json">{{ pensioner.forename }} {{ pensioner.surname }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
